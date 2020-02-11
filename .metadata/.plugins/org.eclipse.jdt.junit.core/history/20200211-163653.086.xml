@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="LexerTests" project="Lab1" tests="7" started="7" failures="0" errors="0" ignored="0">
+  <testsuite name="test.LexerTests" time="0.0">
+    <testcase name="testStringLiteral" classname="test.LexerTests" time="0.0"/>
+    <testcase name="testOperators" classname="test.LexerTests" time="0.0"/>
+    <testcase name="testKWs" classname="test.LexerTests" time="0.0"/>
+    <testcase name="testStringLiteral2" classname="test.LexerTests" time="0.0"/>
+    <testcase name="testPunctuations" classname="test.LexerTests" time="0.0"/>
+    <testcase name="testStringLiteralWithDoubleQuote" classname="test.LexerTests" time="0.0"/>
+    <testcase name="testIntLiteral" classname="test.LexerTests" time="0.0"/>
+  </testsuite>
+</testrun>

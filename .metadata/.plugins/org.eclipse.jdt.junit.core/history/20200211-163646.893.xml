@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="LexerTests.testStringLiteral2" project="Lab1" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testcase name="testStringLiteral2" classname="test.LexerTests" time="0.0"/>
+</testrun>
