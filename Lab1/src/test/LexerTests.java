@@ -142,7 +142,34 @@ public class LexerTests {
 				new Token(EOF, 0, 3, ""));
 	}
 	
+	@Test
+	public void testEmptyStringLiteral() {
+		runtest("\"\"", 
+				new Token(STRING_LITERAL, 0, 0, ""),
+				new Token(EOF, 0, 2, ""));
+	}
+	
 	// all basic functionality test
+	
+	//also checks if keywords are case sensitive
+	@Test
+	public void testIdentifier() {
+		runtest("abc_123=Boolean",
+				new Token(ID,0, 0,"abc_123"),
+				new Token(EQL,0,7,"="),
+				new Token(ID,0,8,"Boolean"),
+				new Token(EOF, 0, 15,"")
+				);
+	}
+	
+	//Meant to fail to show that cannot start with "_", must be char
+	@Test
+	public void testIdentifier2() {
+		runtest("_bc_123",
+				new Token(ID,0, 0,"_bc_123"),
+				new Token(EOF, 0, 7,"")
+				);
+	}
 	
 	@Test
 	public void testIntLiteral() {
@@ -152,6 +179,14 @@ public class LexerTests {
 				);
 	}
 	
+	//with superfluous leading zeroes
+	@Test
+	public void testIntLiteral2() {
+		runtest("0000123123",
+				new Token(INT_LITERAL, 0,0,"0000123123"),
+				new Token(EOF, 0, 10, "")
+				);
+	}
 	
 	@Test
 	public void testKWs() {

@@ -54,14 +54,13 @@ Start with a ", followed by 0 or more non-quote char, ending with "
 */
 (\")(.|[^\"])*(\") {return token(STRING_LITERAL, yytext());}
 
-
 /*Keywords*/
 "boolean" {return token(BOOLEAN);}
 "break" {return token(BREAK);}
 "else" {return token(ELSE);}
 "false" {return token(FALSE);}
 "if" {return token(IF);}
-"importT" {return token(IMPORT);}
+"import" {return token(IMPORT);}
 "int" {return token(INT);}
 "module" {return token(MODULE);}
 "public" {return token(PUBLIC);}
