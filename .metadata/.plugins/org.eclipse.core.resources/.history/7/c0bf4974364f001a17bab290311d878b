@@ -32,6 +32,8 @@ public class LexerTests {
 					assertEquals(expected, actual);
 				} catch(Error e) {
 					if(expected != null)
+						System.out.println("This is correct " + expected.toString());
+						System.out.println("This is actual: "+ actual.toString());
 						fail(e.getMessage());
 					/* return; */
 				}
